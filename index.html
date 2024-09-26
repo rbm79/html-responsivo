@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto HTML CSS JavaScript Responsivo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Prism.js CSS para estilizar o código -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css" rel="stylesheet" />  
+    <!-- Prism.js script para aplicar o realce de sintaxe -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>Projeto HTML CSS JavaScript Responsivo</h1>
+        <p>Design adaptável para todos os dispositivos</p>
+    </header>
+
+    <nav>
+        <a href="#secao1">Sobre</a>
+        <a href="#secao2">Serviços</a>
+        <a href="#secao3">Contato</a>
+    </nav>
+    
+    <section id="secao1">
+        <h2>Sobre o projeto</h2>
+        <p>A responsividade de uma página web refere-se à sua 
+            capacidade de se adaptar e fornecer uma experiência de 
+            visualização ideal em uma ampla variedade de dispositivos
+            desde smartphones até desktops com telas grandes. 
+        </p></br>
+        <p>
+            Vamos analisar os elementos que tornam esta pagina 
+            responsiva:
+        </p></br>
+        <p> <b> Viewport Tag </b> </p></br>
+        <p> <pre><code class="language-html">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+        </p></br>
+        <p>Essa tag garante que a largura da página se ajuste 
+            à largura do dispositivo e que a escala inicial seja 1 para 
+            1 evitando zoom automático em dispositivos móveis.
+        </p>
+    </br>
+        <p> <b> Unidades Relativas </b> </p></br>
+        <pre><code class="language-css">/*Define o tamanho da fonte como mínimo de 1.5rem, idealmente 5vw (5% da largura da viewport), e máximo de 2.5rem.*/ 
+font-size: clamp(1.5rem, 5vw, 2.5rem);</code></pre>
+            
+        <p></p>
+        <ul>
+            <li>
+            Uso de " rem " para tamanhos de fontes e espaçamentos
+            e o uso de porcentagens para larguras como no exemplo
+            acima. 
+            </li>
+            <li>A função " clamp() " é usada para definir valores que 
+                variam dentro de um intervalo, limitando um valor mínimo
+                e máximo.
+            </li>
+            <li>Unidade vw ou viewport width é uma unidade relativa à 
+                largura da janela de visualização (viewport). A janela
+                de visualização é a area visivel da pagina do navegador.
+            </li>
+            <li>1 vw corresponde a 1% da largura da viewport. Se 
+                a largura da janela do navegador for de 1000px
+                entao 1vw = 10px e 50vw = 500px
+            </li>
+            <li>
+                A unidade rem é relativa ao tamanho da fonte do 
+                elemento raiz (tag html). Se o tamanho da fonte 
+                no elemento html for alterado, todas as medidas 
+                em rem serão ajustadas proporcionalmente.
+            </li>
+        </ul>
+        
+
+
+    </br></br></br></br></br></br></br></br></br></br></br></br></br>
+    </section>
+
+    <section id="secao2">
+        <h2>Nossos Serviços</h2>
+        <p>Oferecemos soluções de design e desenvolvimento web totalmente responsivas, garantindo uma experiência consistente em todas as plataformas.</p>
+    </br></br></br></br></br></br></br></br></br></br></br></br></br>
+    
+    <button></button>
+    
+    </section>
+
+    <section id="secao3">
+        <h2>Entre em Contato</h2>
+        <div id="mensagem-sucesso" class="mensagem-sucesso oculto">
+            Mensagem enviada com sucesso!
+        </div>
+        <form id="meuFormulario">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <input type="submit" value="Enviar Mensagem">
+        </form>
+
+
+    </section>
+
+    <button id="btnTopo" title="Voltar ao topo">&nbsp;↑&nbsp; </button>
+    
+    <script src="js/script.js"></script>
+    
+
+</body>
+</html>
